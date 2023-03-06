@@ -21,9 +21,17 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
+permissions_path = '../node_modules/react-native-permissions/ios'
 target 'homework' do
   config = use_native_modules!
-
+  pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
+  pod 'Permission-PhotoLibraryAddOnly', :path => "#{permissions_path}/PhotoLibraryAddOnly"
+  pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
+  pod 'Permission-LocationAccuracy', :path => "#{permissions_path}/LocationAccuracy"
+  pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways"
+  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
+  
   # Flags change depending on the env values.
   flags = get_default_flags()
 
@@ -45,9 +53,8 @@ target 'homework' do
 
   target 'homeworkTests' do
     inherit! :complete
-    # Pods for testing
+    
   end
-
   post_install do |installer|
     react_native_post_install(
       installer,

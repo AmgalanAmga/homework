@@ -25,6 +25,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
+	
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
@@ -37,6 +38,18 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+  	<string>Give permission to access to your photo library</string>
+ 	 <key>NSPhotoLibraryAddUsageDescription</key>
+  	<string>Give permission to access to your photo library</string>
+	<key>NSContactsUsageDescription</key>
+  <string>YOUR contact</string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>Get user's location's when in use TEXT</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>YOUR TEXT</string>
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>YOUR TEXT</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
